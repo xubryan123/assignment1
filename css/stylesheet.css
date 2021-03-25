@@ -1,0 +1,32 @@
+html,body{
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+}
+
+header{
+    text-align: center;
+}
+
+#right{
+    background-color: #f6c177;
+}
+
+#left{
+    box-sizing: border-box;
+    background-color: #6e6a86;
+}
+.wrapper > div{
+    padding: 1em;
+    border: 0px;
+    margin: 0px;
+}
+
+.wrapper{
+    display:grid;
+    height: 100vh;
+    grid-template-columns: 1fr 4fr;
+}
+
+textarea{
+    width: 100%;
+}
