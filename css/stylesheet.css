@@ -23,6 +23,11 @@ button{
     border: none;
 }
 
+.responsive{
+    max-width: 100%;
+    max-height: 100%;
+}
+
 #left{
     box-sizing: border-box;
     background-color: #9ccfd8;
