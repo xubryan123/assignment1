@@ -12,9 +12,10 @@
     />
     <title>Take Notes</title>
   </head>
+  <main>
   <body>
     <div class="wrapper">
-      <div id="left">
+      <aside>
         <header>
           <h1>My Notes</h1>
         </header>
@@ -22,16 +23,17 @@
           <li>note one</li>
           <li>note two</li>
         </ul>
-      </div>
+      <aside>
       <div id="right">
         <header>
           <h1>Take Better Notes</h1>
+          <nav>
+            <a title="About" href="misc/about.html">About</a>
+            <a title="docs" href="misc/docs.html">Docs</a>
+          </nav>
         </header>
-        <nav>
-          <a title="About" href="misc/about.html">About</a>
-          <a title="docs" href="misc/docs.html">Docs</a>
-        </nav>
         <div class="rightwrap">
+          <main>
           <div class='buttongrid'>
             <button
               onclick="document.getElementById(
@@ -60,6 +62,7 @@
               Cancel
             </button>
           </div>
+        </main>
           <footer>
             <h2>Keep in Touch</h2>
             <a href="https://ca.linkedin.com/"><img
