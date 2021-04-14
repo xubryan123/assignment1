@@ -16,13 +16,40 @@ save button function:
 -add to nav using .appendChild()*/
 
 const btn = document.querySelector(".darkbutton");
-
+const rightcolor = document.querySelector(".right");
+const leftcolor = document.querySelector(".left");
+const cancelbtn = document.querySelector(".cancelbutton");
+const savebtn = document.querySelector(".savebutton");
+const newnotebtn = document.querySelector(".newnote");
+const textarea1 = document.querySelector(".notesarea");
 
 function darkMode(){
-    const rightcolor = document.querySelector(".right")
-    const leftcolor = document.querySelector(".left")
     rightcolor.classList.toggle("dark-mode");
     leftcolor.classList.toggle("dark-mode");
+}
+
+function changeButtonText(){
+    if (btn.textContent === "Dark Mode"){
+        btn.textContent = "Light Mode";
+    } else {
+        btn.textContent = "Dark Mode"
+    }
+}
+
+function cancel(){
+    textarea1.style.display = 'none';
+    cancelbtn.style.display = 'none';
+    savebtn.style.display = 'none';
+}
+
+function newnote(){
+    if (cancelbtn.style.display === 'none'){
+        textarea1.style.display = 'block';
+        cancelbtn.style.display = 'block';
+        savebtn.style.display = 'block';
+    } else {
+        textarea1.value='';
+    }
 }
 
 // function populateNotesList(arr) {
@@ -38,3 +65,6 @@ function darkMode(){
 // let myNotes = []
 
 btn.addEventListener("click", darkMode);
+btn.addEventListener("click", changeButtonText);
+cancelbtn.addEventListener("click", cancel);
+newnotebtn.addEventListener("click", newnote);
