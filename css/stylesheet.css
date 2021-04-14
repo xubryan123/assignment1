@@ -8,7 +8,17 @@ header{
     text-align: center;
 }
 
-#right{
+/* .rightcolor.light{
+    background-color: #f2e9de;
+}
+
+.leftcolor.light{
+    background-color: #9ccfd8;
+} */
+
+
+
+.right{
     height: 100vh;
     background-color: #f2e9de;
 }
@@ -28,10 +38,16 @@ button{
     max-height: 100%;
 }
 
-#left{
+.left{
     box-sizing: border-box;
     background-color: #9ccfd8;
 }
+
+.dark-mode{
+    background-color: black;
+    color: white;
+}
+
 .wrapper > div{
     padding: 1em;
     border: 0px;
