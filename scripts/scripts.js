@@ -22,6 +22,9 @@ const cancelbtn = document.querySelector(".cancelbutton");
 const savebtn = document.querySelector(".savebutton");
 const newnotebtn = document.querySelector(".newnote");
 const textarea1 = document.querySelector(".notesarea");
+const list = document.querySelector(".notes");
+
+let notelist = [{title: 'note one', body: 'this is my first note'}];
 
 function darkMode(){
     rightcolor.classList.toggle("dark-mode");
@@ -52,19 +55,26 @@ function newnote(){
     }
 }
 
-// function populateNotesList(arr) {
-//     const list = document.querySelector(".notes");
-//     for (let item of arr) {
-//         let elem = document.createElement("li");
-//         let text = document.createTextNode(item);
-//         elem.appendChild(text);
-//         elem.appendChild(elem);
-//     }
-// }
+function save(){
+    var newtitle = prompt("Please enter a title for your note: ");
+    notelist.push({title: newtitle, body: textarea1.value});
+}
 
-// let myNotes = []
+function populatelist() {
+    list.innerHTML='';
+    for (let item of notelist) {
+        let elem = document.createElement("li");
+        let text = document.createTextNode(item.title);
+        elem.appendChild(text);
+        list.appendChild(elem);
+    }
+}
 
 btn.addEventListener("click", darkMode);
 btn.addEventListener("click", changeButtonText);
 cancelbtn.addEventListener("click", cancel);
 newnotebtn.addEventListener("click", newnote);
+savebtn.addEventListener("click", save);
+savebtn.addEventListener("click", populatelist);
+
+console.log(notelist)
