@@ -70,11 +70,17 @@ function populatelist() {
     }
 }
 
+function showbody(e){
+    if (e.target !== e.currentTarget){
+        var clickedNote = e.target.value;
+        textarea1.value = clickedNote;
+    }
+}
+
 btn.addEventListener("click", darkMode);
 btn.addEventListener("click", changeButtonText);
 cancelbtn.addEventListener("click", cancel);
 newnotebtn.addEventListener("click", newnote);
 savebtn.addEventListener("click", save);
 savebtn.addEventListener("click", populatelist);
-
-console.log(notelist)
+list.addEventListener("click", showbody, false)
