@@ -72,8 +72,12 @@ function populatelist() {
 
 function showbody(e){
     if (e.target !== e.currentTarget){
-        var clickedNote = e.target.value;
-        textarea1.value = clickedNote;
+        var clickedNote = e.target.textContent;
+        for (let item of notelist) {
+            if (item.title === clickedNote){
+                textarea1.value = item.body;
+            }
+        }
     }
 }
 
